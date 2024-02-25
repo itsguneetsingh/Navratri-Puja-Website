@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import React from 'react'
-import Navbar from '@/Components/Navbar'
-import Home from '@/Pages/Homepage'
-import Card from '@/Components/Card'
+import React from "react";
+import Navbar from "@/Components/Navbar";
+import Home from "@/Pages/Homepage";
+import Benefits from "@/Pages/Benefits";
 
 const page = () => {
   return (
     <div>
-      <Navbar/> 
-      <Home/>
-      <Card/>
+      <Navbar />
+      <Home />
+      <Benefits />
+      {/* <Card /> */}
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
