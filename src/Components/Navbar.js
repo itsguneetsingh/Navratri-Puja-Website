@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -24,18 +25,30 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex justify-between space-x-4">
-                <a className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200">
+                <Link
+                  href="/"
+                  className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200"
+                >
                   HOME
-                </a>
-                <a className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200">
+                </Link>
+                <Link
+                  href="/schedule"
+                  className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200"
+                >
                   SCHEDULE
-                </a>
-                <a className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200">
+                </Link>
+                <Link
+                  href="yamunanagar"
+                  className="text-black m-5 hover:bg-white hover:rounded-lg p-2 transition-all duration-200"
+                >
                   YAMUNANAGAR
-                </a>
-                <a className="text-white hover:text-black m-5 bg-[rgba(2,46,87,255)] rounded-lg py-3 hover:bg-[rgba(255,245,253,255)] hover:rounded-lg p-2 transition-all duration-200">
+                </Link>
+                <Link
+                  href="/registration"
+                  className="text-white hover:text-black m-5 bg-[rgba(2,46,87,255)] rounded-lg py-3 hover:bg-[rgba(255,245,253,255)] hover:rounded-lg p-2 transition-all duration-200"
+                >
                   REGISTRATION
-                </a>
+                </Link>
               </div>
             </div>
             <div className="md:hidden flex items-center">
@@ -82,18 +95,30 @@ const Navbar = () => {
           {isOpen ? (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a className="text-black block px-3 py-2 rounded-md text-base font-medium">
+                <Link
+                  href="/"
+                  className="text-black block px-3 py-2 rounded-md text-base font-medium"
+                >
                   HOME
-                </a>
-                <a className="text-black block px-3 py-2 rounded-md text-base font-medium">
+                </Link>
+                <Link
+                  href="/schedule"
+                  className="text-black block px-3 py-2 rounded-md text-base font-medium"
+                >
                   SCHEDULE
-                </a>
-                <a className="text-black block px-3 py-2 rounded-md text-base font-medium">
+                </Link>
+                <Link
+                  href="/yamunanagar"
+                  className="text-black block px-3 py-2 rounded-md text-base font-medium"
+                >
                   YAMUNANAGAR
-                </a>
-                <a className="text-black block px-3 py-2 rounded-md text-base font-medium">
+                </Link>
+                <Link
+                  href="/registration"
+                  className="text-black block px-3 py-2 rounded-md text-base font-medium"
+                >
                   REGISTRATION
-                </a>
+                </Link>
               </div>
             </div>
           ) : null}

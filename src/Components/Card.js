@@ -1,10 +1,23 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ elements }) => {
   return (
     <div className="flex flex-col items-center justify-center my-7">
-      <div className="bg-[rgba(255,230,230,255)] rounded-lg text-2xl w-2/3 shadow-md">
-        <div className="flex flex-col items-center text-slate-800 font-bold my-4">
+      <div className="bg-[rgba(255,230,230,255)] rounded-lg text-2xl w-2/3 shadow-md p-4 flex flex-col items-center ">
+        {elements.map((element, index) => (
+          <div key={index} className="mb-2">
+            {element}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Card;
+
+{
+  /* <div className="flex flex-col items-center text-slate-800 font-bold my-4">
           CONTACT INFORMATION
           <table className="w-full text-sm text-center text-white dark:text-black mb-10 mt-5">
             <thead className="text-xs text-white uppercase bg-gray-900 dark:text-white font-bold">
@@ -113,10 +126,5 @@ const Card = () => {
           <span className="font-normal text-base px-20 text-center">
             - Shri Virendra Vajpayee, 9425146024
           </span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Card;
+        </div> */
+}
